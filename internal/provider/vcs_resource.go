@@ -91,7 +91,7 @@ func (r *VcsResource) Schema(ctx context.Context, req resource.SchemaRequest, re
 				Default:     stringdefault.StaticString("GITHUB"),
 				Description: "Variable description",
 				Validators: []validator.String{
-					stringvalidator.OneOf("GITHUB", "GITLAB", "BITBUCKET", "AZURE_DEVOPS"),
+					stringvalidator.OneOf("GITHUB", "GITLAB", "BITBUCKET", "AZURE_DEVOPS", "AZURE_SP_MI"),
 				},
 			},
 			"connection_type": schema.StringAttribute{
